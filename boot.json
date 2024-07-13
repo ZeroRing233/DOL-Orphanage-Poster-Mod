@@ -1,0 +1,22 @@
+{
+    "name": "OrphangePoster",
+    "version": "1.0.0",
+    "styleFileList": [],
+    "scriptFileList": [],
+    "tweeFileList": [],
+    "imgFileList": [],
+    "additionFile": [
+        "readme.md",
+        "game/optionsOverlay.txt"
+    ],
+    "addonPlugin": [{
+        "modName": "TweeReplacer",
+        "addonName": "TweeReplacerAddon",
+        "modVersion": "1.0.0",
+        "params": [{
+            "passage": "Options Overlay",
+            "findRegex": "\\s*<<if \\$passage isnot \"Start\">>",
+            "replaceFile": "game/optionsOverlay.txt"
+        }]
+    }]
+}

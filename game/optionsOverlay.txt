@@ -1,0 +1,38 @@
+	<br>
+	<span class="gold">孤儿院大厅海报模组设置</span>
+	<div>
+		<div class="settingsToggle">
+			请选择孤儿院大厅海报风格
+			<br>
+			<label><<radiobutton "$options.posterStyle" "pixel" autocheck>>像素风（推荐）</label>
+            <mouse class="tooltip linkBlue">(?)<span>像素风的孤儿院大厅海报</span></mouse>
+			<br>
+			<label><<radiobutton "$options.posterStyle" "pixel-en" autocheck>>像素风（英文）</label>
+			<mouse class="tooltip linkBlue">(?)<span>像素风的孤儿院大厅海报，文本内容为英文</span></mouse>
+			<br>
+			<label><<radiobutton "$options.posterStyle" "non-pixel" autocheck>>非像素风</label>
+            <mouse class="tooltip linkBlue">(?)<span>精细化的孤儿院大厅海报</span></mouse>
+		</div>
+		<div class="settingsToggle">
+			请选择孤儿院大厅海报宽度
+			<br>
+			<label><<radiobutton "$options.posterWidth" "poster-60" autocheck>>60%（推荐）</label>
+            <mouse class="tooltip linkBlue">(?)<span>海报宽度占当前文字展示宽度的60%</span></mouse>
+			<br>
+			<label><<radiobutton "$options.posterWidth" "poster-80" autocheck>>80%</label>
+			<mouse class="tooltip linkBlue">(?)<span>海报宽度占当前文字展示宽度的80%</span></mouse>
+			<br>
+			<label><<radiobutton "$options.posterWidth" "poster-100" autocheck>>100%</label>
+            <mouse class="tooltip linkBlue">(?)<span>海报宽度占当前文字展示宽度的100%</span></mouse>
+		</div>
+		<div class="settingsToggle">
+			请选择是否展示罗宾房间便条
+			<mouse class="tooltip linkBlue">(?)<span>如果选择"是"，罗宾外出时会展示可爱的像素风便条。</span></mouse>
+			<br>
+			<label><<radiobutton "$options.robinNote" true autocheck>>是</label>
+			<br>
+			<label><<radiobutton "$options.robinNote" false autocheck>>否</label>
+		</div>
+		<div style="clear:both;">/*保持在切换按钮的末端*/</div>
+	</div>
+    <<if $passage isnot "Start">>
