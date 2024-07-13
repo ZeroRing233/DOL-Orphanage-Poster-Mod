@@ -1,22 +1,44 @@
 {
     "name": "OrphangePoster",
     "version": "1.0.0",
-    "styleFileList": [],
+    "styleFileList": ["game/poster.css"],
     "scriptFileList": [],
     "tweeFileList": [],
     "imgFileList": [],
     "additionFile": [
         "readme.md",
-        "game/optionsOverlay.txt"
+        "game/optionsOverlay.txt",
+        "game/variablesVersionUpdate.txt",
+        "game/gameStartOnly.txt"
     ],
     "addonPlugin": [{
         "modName": "TweeReplacer",
         "addonName": "TweeReplacerAddon",
         "modVersion": "1.0.0",
         "params": [{
-            "passage": "Options Overlay",
-            "findRegex": "\\s*<<if \\$passage isnot \"Start\">>",
-            "replaceFile": "game/optionsOverlay.txt"
-        }]
+                "passage": "Options Overlay",
+                "findRegex": "\\s*<<if \\$passage isnot \"Start\">>",
+                "replaceFile": "game/optionsOverlay.txt",
+                "comments": "在选项-通用里添加海报设置"
+            },
+            {
+                "passage": "Widgets variablesVersionUpdate",
+                "findString": "<!-- 5.0.3 -->",
+                "replaceFile": "game/variablesVersionUpdate.txt",
+                "comments": "玩家导入存档时添加默认的海报设置"
+            },
+            {
+                "passage": "gameStartOnly",
+                "findString": "<<set $passageChangesCount to 0>>",
+                "replaceFile": "game/gameStartOnly.txt",
+                "comments": "在开始游戏时添加默认的海报设置"
+            },
+            {
+                "passage": "Widgets Home Events",
+                "findString": "<<switch random(1, 6)>>",
+                "replace": "<<rng 6>><<switch $rng>>",
+                "comments": "修改高希望海报判断方式（原因：方便使用修改rng的方式调测)"
+            }
+        ]
     }]
 }

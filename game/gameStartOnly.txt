@@ -1,0 +1,11 @@
+<<set $passageChangesCount to 0>>
+<!-- poster-mod -->
+<<if $options.posterStyle is undefined>>
+    <<set $options.posterStyle to "pixel">>
+<</if>>
+<<if $options.posterWidth is undefined>>
+    <<set $options.posterWidth to "poster-60">>
+<</if>>
+<<if $options.robinNote is undefined>>
+    <<set $options.robinNote to true>>
+<</if>>
