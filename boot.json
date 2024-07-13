@@ -2,8 +2,8 @@
     "name": "OrphangePoster",
     "version": "1.0.0",
     "styleFileList": ["game/poster.css"],
-    "scriptFileList": [],
-    "tweeFileList": [],
+    "scriptFileList": ["game/robinRoomNote.js"],
+    "tweeFileList": ["game/widgets.twee"],
     "imgFileList": [],
     "additionDir": [
         "posterModImg"
@@ -62,6 +62,13 @@
                     "findRegex": "\\s*<<case 7>>\n\\s*<<generatey1>>(.|\n)*?<</link>>",
                     "replaceFile": "game/homeeventrebhi.txt",
                     "comments": "修改高叛逆海报的具体内容"
+                },
+                {
+                    "passage": "Robin's Room Entrance",
+                    "findString": "<<getouticon>><<link [[离开|Orphanage]]>><</link>>",
+                    "replace": "<<robin-room-note>><<getouticon>><<link [[离开|Orphanage]]>><</link>>",
+                    "all": true,
+                    "comments": "为罗宾房间门口的便条添加图片"
                 }
             ]
         },
