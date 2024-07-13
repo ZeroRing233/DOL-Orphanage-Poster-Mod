@@ -5,40 +5,85 @@
     "scriptFileList": [],
     "tweeFileList": [],
     "imgFileList": [],
+    "additionDir": [
+        "posterModImg"
+    ],
     "additionFile": [
         "readme.md",
+        "posterModImg/imgFileListFile.json",
         "game/optionsOverlay.txt",
         "game/variablesVersionUpdate.txt",
-        "game/gameStartOnly.txt"
+        "game/gameStartOnly.txt",
+        "game/homeeventhopehi.txt",
+        "game/homeeventrebhi.txt"
     ],
     "addonPlugin": [{
-        "modName": "TweeReplacer",
-        "addonName": "TweeReplacerAddon",
-        "modVersion": "1.0.0",
-        "params": [{
-                "passage": "Options Overlay",
-                "findRegex": "\\s*<<if \\$passage isnot \"Start\">>",
-                "replaceFile": "game/optionsOverlay.txt",
-                "comments": "在选项-通用里添加海报设置"
-            },
-            {
-                "passage": "Widgets variablesVersionUpdate",
-                "findString": "<!-- 5.0.3 -->",
-                "replaceFile": "game/variablesVersionUpdate.txt",
-                "comments": "玩家导入存档时添加默认的海报设置"
-            },
-            {
-                "passage": "gameStartOnly",
-                "findString": "<<set $passageChangesCount to 0>>",
-                "replaceFile": "game/gameStartOnly.txt",
-                "comments": "在开始游戏时添加默认的海报设置"
-            },
-            {
-                "passage": "Widgets Home Events",
-                "findString": "<<switch random(1, 6)>>",
-                "replace": "<<rng 6>><<switch $rng>>",
-                "comments": "修改高希望海报判断方式（原因：方便使用修改rng的方式调测)"
+            "modName": "TweeReplacer",
+            "addonName": "TweeReplacerAddon",
+            "modVersion": "1.0.0",
+            "params": [{
+                    "passage": "Options Overlay",
+                    "findRegex": "\\s*<<if \\$passage isnot \"Start\">>",
+                    "replaceFile": "game/optionsOverlay.txt",
+                    "comments": "在选项-通用里添加海报设置"
+                },
+                {
+                    "passage": "Widgets variablesVersionUpdate",
+                    "findString": "<!-- 5.0.3 -->",
+                    "replaceFile": "game/variablesVersionUpdate.txt",
+                    "comments": "玩家导入存档时添加默认的海报设置"
+                },
+                {
+                    "passage": "gameStartOnly",
+                    "findString": "<<set $passageChangesCount to 0>>",
+                    "replaceFile": "game/gameStartOnly.txt",
+                    "comments": "在开始游戏时添加默认的海报设置"
+                },
+                {
+                    "passage": "Widgets Home Events",
+                    "findString": "<<switch random(1, 6)>>",
+                    "replace": "<<rng 6>><<switch $rng>>",
+                    "comments": "修改高希望海报的进入方式（原因：方便使用修改rng的方式调测)"
+                },
+                {
+                    "passage": "Widgets Home Events",
+                    "findRegex": "\\s*<<case 5>>\n.*<<rng>>(.|\n)*?<</link>>",
+                    "replaceFile": "game/homeeventhopehi.txt",
+                    "comments": "修改高希望海报的具体内容"
+                },
+                {
+                    "passage": "Widgets Home Events",
+                    "findString": "<<switch random(1, 9)>>",
+                    "replace": "<<rng 9>><<switch $rng>>",
+                    "comments": "修改高叛逆海报的进入方式（原因：方便使用修改rng的方式调测)"
+                },
+                {
+                    "passage": "Widgets Home Events",
+                    "findRegex": "\\s*<<case 7>>\n\\s*<<generatey1>>(.|\n)*?<</link>>",
+                    "replaceFile": "game/homeeventrebhi.txt",
+                    "comments": "修改高叛逆海报的具体内容"
+                }
+            ]
+        },
+        {
+            "modName": "BeautySelectorAddon",
+            "addonName": "BeautySelectorAddon",
+            "modVersion": "^2.0.0",
+            "params": {
+                "types": [{
+                    "type": "posterModImg",
+                    "imgFileListFile": "posterModImg/imgFileListFile.json"
+                }]
             }
-        ]
-    }]
+        }
+    ],
+    "dependenceInfo": [{
+            "modName": "TweeReplacer",
+            "version": "^1.0.0"
+        },
+        {
+            "modName": "BeautySelectorAddon",
+            "version": "^2.0.0"
+        }
+    ]
 }
