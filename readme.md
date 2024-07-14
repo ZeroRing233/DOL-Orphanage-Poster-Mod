@@ -32,7 +32,9 @@
 
 ![手机版设置](https://github.com/ZeroRing233/DOL-Orphanage-Poster-Mod/blob/master/assets/setting-phone.jpg)
 </details>
+
 电脑：
+
 <details>
   <summary>点击查看图片</summary>
 
@@ -41,6 +43,7 @@
 
 ### 电脑端调整设置后的效果
 （以同一张海报为例，多图预警）
+
 英文，像素风：
 <details>
   <summary>点击查看图片</summary>
@@ -55,21 +58,21 @@
 ![常规，像素风](https://github.com/ZeroRing233/DOL-Orphanage-Poster-Mod/blob/master/assets/pc_pixel.jpg)
 </details>
 
-非像素风,小：
+非像素风，小：
 <details>
   <summary>点击查看图片</summary>
 
 ![非像素风，小](https://github.com/ZeroRing233/DOL-Orphanage-Poster-Mod/blob/master/assets/pc_non_pixel_s.jpg)
 </details>
 
-非像素风,中：
+非像素风，中：
 <details>
   <summary>点击查看图片</summary>
 
 ![非像素风,中](https://github.com/ZeroRing233/DOL-Orphanage-Poster-Mod/blob/master/assets/pc_non_pixel_m.jpg)
 </details>
 
-非像素风,大：
+非像素风，大：
 <details>
   <summary>点击查看图片</summary>
 
